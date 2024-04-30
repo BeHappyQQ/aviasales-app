@@ -1,0 +1,62 @@
+.transfer {
+  display: grid;
+  grid-template-columns: 250px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin-top: 20px;
+  background-color: #fff;
+  padding-bottom: 10px;
+  .count_title {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding: 20px 20px 0px;
+  }
+
+  label {
+    padding: 10px 70px 10px 16px;
+    padding-left: 50px;
+    cursor: pointer;
+    &:hover {
+      background-color: #f1fcff;
+    }
+
+    input {
+      position: absolute;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+
+    .check_box {
+      margin-left: -1.8em;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url('../../assets/checked-off.svg');
+    }
+    input[type='checkbox']:checked + .check_box {
+      background-image: url('../../assets/checked-on.svg');
+    }
+
+    input[type='checkbox']:active + .check_box {
+      outline: none;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .transfer {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .transfer {
+    grid-column: 1;
+    grid-row: 1;
+    height: 265px;
+    margin-top: 0;
+  }
+}
